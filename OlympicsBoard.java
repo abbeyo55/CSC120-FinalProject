@@ -44,4 +44,15 @@ public class OlympicsBoard {
     public Integer getWrongAnswer(){
         return WrongAnswer;
     }
+
+    /**
+     * want this to return a type of true or false
+     * boolean?? 
+     */
+    //public Integer checkAnwser(){
+        //return checkAnswer;
+    //}
+
+
+    //somewhere I want to add place to collect all questions and answers, maybe make new java doc for this
 }

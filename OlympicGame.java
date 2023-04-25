@@ -70,9 +70,6 @@ class OlympicGame {
         else if(CorrectAnswer.contains("2")){
             return 1;
         }
-        //else if(CorrectAnswer.contains("redo")){
-            //return -1;
-        //}
         else{
             return -1;
         }
@@ -227,7 +224,7 @@ class OlympicGame {
                     }
                 } 
 
-                if(gameRun.nextLine() == "redo"){
+                /** if(gameRun.nextLine() == "redo"){
                     System.out.print("do you wish to give another anwser?");
                     if(gameRun.nextLine() == "yes"){
                         gameRun.nextLine();
@@ -236,6 +233,7 @@ class OlympicGame {
                         break;
                     }
                 }
+                //
                 
                 //**MAKE REVERSIBLE TO RESELECT ANWSER */
 
