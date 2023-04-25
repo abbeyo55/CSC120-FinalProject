@@ -177,9 +177,9 @@ class OlympicGame {
      * need to "collect" all the information, gather it and then print out all responses with anwsers
      * want to print out question, with text either stating correct or incorrect next to it
      */
-    public void printResults(){
-        System.out.println(map);
-       }
+    //public void printResults(){
+        //System.out.println(map);
+       //}
 
     /**
      * To start the game, this will run a loop until reaching "50" as that is when the game ends as it reaches the max amount of points on the game board
@@ -251,8 +251,8 @@ class OlympicGame {
 
             //Game is over; count the total score to see the result
             System.out.println("You reached the end of the game.");
-            System.out.println("Your results are:");
-            RunOlympic.printResults();
+            //System.out.println("Your results are:");
+            //RunOlympic.printResults();
             System.out.println("Your total point value is: " + point + " when averaging all your points in the game");
             
             if(point > 10){
