@@ -238,6 +238,7 @@ class OlympicGame {
                 //**MAKE REVERSIBLE TO RESELECT ANWSER */
 
                 //Run the random number generator again to move on with the game (if continuing loop) or to reach final result at end of game (ends the loop)
+                //problem is when the game ends, this is still printed without question attached, and then the end game message is printed 
                 //Seperator
                 System.out.println();
                 System.out.println("...");
