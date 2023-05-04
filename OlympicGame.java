@@ -53,9 +53,7 @@ class OlympicGame {
 
 
         String[] answerSeperator = answerList.toString().replace("[", "").replace("]", "").split(",");
-        System.out.println("The options are:" + "\n 1: " + answerSeperator[0] + "\n 2:" + answerSeperator[1]);
-        //System.out.println("If you would like to reroll and get a different question, write 'redo'");
-
+        System.out.println("The options are:" + "\n 0: " + answerSeperator[0] + "\n 1:" + answerSeperator[1]);
     }
 
     /**
@@ -64,10 +62,10 @@ class OlympicGame {
      * @return Integer of indexes for the multiple choice
      */
     private Integer multipleChoice(String CorrectAnswer){
-        if(CorrectAnswer.contains("1")){
+        if(CorrectAnswer.contains("0")){
             return 0;
         }
-        else if(CorrectAnswer.contains("2")){
+        else if(CorrectAnswer.contains("1")){
             return 1;
         }
         else{
@@ -84,14 +82,15 @@ class OlympicGame {
      * @param spot - index of the spot number played by user
      */
     public boolean play(String reply, Integer spot){
-        if (reply.equalsIgnoreCase("1") || reply.equalsIgnoreCase("2") ){
+        if (reply.equalsIgnoreCase("0") || reply.equalsIgnoreCase("1") ){
             System.out.println("Your written answer: " + reply);
+            System.out.println("The correct answer was: " + map[spot].CorrectAnswer);
             
             if (map[spot].getWrongAnswer() == multipleChoice(reply)){
                 point -= 3;
             } 
             if(map[spot].getCorrectAnswer() == multipleChoice(reply)){
-                point += 3;            
+                point += 3;
             }
             return true;
         }
@@ -173,9 +172,8 @@ class OlympicGame {
     }
    
     /**
-     * want to print results of all questions from the game after being placed
+     * want to print all questions from the game after being placed
      * need to "collect" all the information, gather it and then print out all responses with anwsers
-     * want to print out question, with text either stating correct or incorrect next to it
      */
     //public void printResults(){
         //System.out.println(map);
@@ -185,6 +183,9 @@ class OlympicGame {
      * To start the game, this will run a loop until reaching "50" as that is when the game ends as it reaches the max amount of points on the game board
      * displays answer as to what level of knowledge you know of Olympics when the game ends
      */
+
+    
+     
     public static void main(String[] args) {
         OlympicGame RunOlympic = new OlympicGame();
         
@@ -197,13 +198,14 @@ class OlympicGame {
             //Run the random number generator and change location
             RandomNumber = random();
             CurrentSpot += RandomNumber;
+            //System.out.println(CorrectAnswer);
 
             //Only 50 tiles to reach end of game
             while(CurrentSpot < 51){
                 System.out.println("Moved " + RandomNumber + " places from last spot on gameboard.");
                 System.out.println("You're currently on spot number " + CurrentSpot);
                 RunOlympic.ask(CurrentSpot);
-                System.out.print("Please type your answer of either 1 or 2: ");
+                System.out.print("Please type your answer of either 0 or 1: ");
 
                 //Waiting for input
                 String reply = gameRun.nextLine(); 
@@ -211,7 +213,7 @@ class OlympicGame {
 
                 //Asks question, play game
                 while(RunOlympic.play(reply, CurrentSpot) == false){
-                    System.out.print("Invalid answer, please select 1 or 2: ");
+                    System.out.print("Invalid answer, please select 0 or 1: ");
                     String replyAgain = gameRun.nextLine(); 
 
                     //if not correcting answer to a or b, code will run again until given correct response (needs to run in a loop)
@@ -223,23 +225,27 @@ class OlympicGame {
                         break;
                     }
                 } 
-
-                /** if(gameRun.nextLine() == "redo"){
-                    System.out.print("do you wish to give another anwser?");
-                    if(gameRun.nextLine() == "yes"){
-                        gameRun.nextLine();
-                    }
-                    if(gameRun.nextLine() == "no"){
-                        break;
-                    }
-                }
-                //
                 
-                //**MAKE REVERSIBLE TO RESELECT ANWSER */
+                //while (true) {
+                    //System.out.print("Would you like to redo a question (y/n)? ");
+                    //String redo = gameRun.nextLine();
+                    //if (redo.equalsIgnoreCase("n")) {
+                        //break;
+                    //}
+                    //if (redo.equalsIgnoreCase("y")) {
+                        //System.out.println("You have selected to redo the question above");
+                        //break;
+
+                    //} else {
+                        //RunOlympic.ask(CurrentSpot);
+                    //}
+                //}
+                
 
                 //Run the random number generator again to move on with the game (if continuing loop) or to reach final result at end of game (ends the loop)
                 //problem is when the game ends, this is still printed without question attached, and then the end game message is printed 
                 //Seperator
+                
                 System.out.println();
                 System.out.println("...");
                 System.out.println("Generating next spot on gameboard...");
@@ -257,16 +263,16 @@ class OlympicGame {
             System.out.println("Your total point value is: " + point + " when averaging all your points in the game");
             
             if(point > 10){
-                Master Final = new Master();
-                Final.display();
+                System.out.println("You are clearly a master at your Olympic facts!");
+                System.out.println("You have shown you have in-depth knowledge of Olympic facts as well as an understanding of the history, rules and facts about different sports. Congrats!");
             }
             if(point < 10 & point > -10){
-                Competent Final = new Competent();
-                Final.display();
+                System.out.println("You are competent at your Olympic facts!");
+                System.out.println("You have shown moderate understanding of Olympic facts, as well as the history of the games and various sports and events. Congrats, hopefully you still learned some things!");
             }
             if(point < -10){
-                Novice Final = new Novice();
-                Final.display();
+                System.out.println("You are still a beginner at your Olympic facts.");
+                System.out.println("You have shown limited knowledge of Olympic facts, but hopefully you have learned something!");
             }
             
             //Close scanner

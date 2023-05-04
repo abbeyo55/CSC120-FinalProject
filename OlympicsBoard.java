@@ -1,9 +1,14 @@
+// I did not collaborate with anyone on this assignment
+import java.util.Scanner; 
+
 public class OlympicsBoard {
     //Declaring parameters
     String question;
     String[] answers;
     Integer CorrectAnswer;
     Integer WrongAnswer;
+    Scanner scanner;
+    //String previousAnswer;
 
     /* Constructor */
     public OlympicsBoard(String question, Integer CorrectAnswer, Integer WrongAnswer, String... questionAnswsers){
@@ -11,6 +16,8 @@ public class OlympicsBoard {
         this.answers = questionAnswsers;
         this.CorrectAnswer = CorrectAnswer;
         this.WrongAnswer = WrongAnswer;
+        //this.scanner = new Scanner(System.in);
+        //this.previousAnswer = null;
     }
 
     /** 
@@ -56,3 +63,4 @@ public class OlympicsBoard {
 
     //somewhere I want to add place to collect all questions and answers, maybe make new java doc for this
 }
+

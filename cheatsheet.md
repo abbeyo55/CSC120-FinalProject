@@ -10,6 +10,9 @@ If your game includes challenges that must be overcome to win, also list them be
 Below are the correct and wrong responses to all prompts asked of user. Correct responses are placed first, then after the comma is the incorrect anwser. 
 To score perfectly use all the first letters. 
 
+
+__YES__ 2 pts: Submission includes a **cheat sheet** (`cheatsheet.md`) documenting all of the available commands, as well as a **description of the layout** of your game world's underlying physical layout; this can be described in words, or included as a separate image file if you prefer to sketch a map by hand.  If your game includes **challenges** that must be overcome to win, also describe them here.
+
 Q1: b, a
 Q2: a, b
 Q3: b, a
