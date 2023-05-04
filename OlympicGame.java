@@ -261,21 +261,24 @@ class OlympicGame {
             //System.out.println("Your results are:");
             //RunOlympic.printResults();
             System.out.println("Your total point value is: " + point + " when averaging all your points in the game");
+            System.out.println();
+            System.out.println();
             
             if(point > 10){
-                System.out.println("You are clearly a master at your Olympic facts!");
-                System.out.println("You have shown you have in-depth knowledge of Olympic facts as well as an understanding of the history, rules and facts about different sports. Congrats!");
+                Master Final = new Master();
+                 Final.display();
             }
             if(point < 10 & point > -10){
-                System.out.println("You are competent at your Olympic facts!");
-                System.out.println("You have shown moderate understanding of Olympic facts, as well as the history of the games and various sports and events. Congrats, hopefully you still learned some things!");
+                Competent Final = new Competent();
+                 Final.display();
             }
             if(point < -10){
-                System.out.println("You are still a beginner at your Olympic facts.");
-                System.out.println("You have shown limited knowledge of Olympic facts, but hopefully you have learned something!");
+                Novice Final = new Novice();
+                 Final.display();
             }
             
             //Close scanner
             gameRun.close();
+            
         }
 }
