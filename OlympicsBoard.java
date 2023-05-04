@@ -8,7 +8,6 @@ public class OlympicsBoard {
     Integer CorrectAnswer;
     Integer WrongAnswer;
     Scanner scanner;
-    //String previousAnswer;
 
     /* Constructor */
     public OlympicsBoard(String question, Integer CorrectAnswer, Integer WrongAnswer, String... questionAnswsers){
@@ -16,8 +15,6 @@ public class OlympicsBoard {
         this.answers = questionAnswsers;
         this.CorrectAnswer = CorrectAnswer;
         this.WrongAnswer = WrongAnswer;
-        //this.scanner = new Scanner(System.in);
-        //this.previousAnswer = null;
     }
 
     /** 

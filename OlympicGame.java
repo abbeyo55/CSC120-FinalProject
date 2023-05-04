@@ -83,7 +83,7 @@ class OlympicGame {
      */
     public boolean play(String reply, Integer spot){
         if (reply.equalsIgnoreCase("0") || reply.equalsIgnoreCase("1") ){
-            System.out.println("Your written answer: " + reply);
+            System.out.println("YOUR ANWSER: " + reply);
             System.out.println("The correct answer was: " + map[spot].CorrectAnswer);
             
             if (map[spot].getWrongAnswer() == multipleChoice(reply)){
@@ -99,6 +99,16 @@ class OlympicGame {
             return false;
         }
     }  
+
+    //public boolean help(String reply, Integer spot){
+        //if (reply.equalsIgnoreCase("help")){
+           // System.out.println("Q1: b / Q2: a / Q3: b ");
+            //return true;
+        //}
+       // else{
+           // return false;
+        //}
+    //}
 
     /**
      * Create a random number generator where it generates a random number between 1 and 5 (inclusive)
@@ -210,7 +220,6 @@ class OlympicGame {
                 //Waiting for input
                 String reply = gameRun.nextLine(); 
 
-
                 //Asks question, play game
                 while(RunOlympic.play(reply, CurrentSpot) == false){
                     System.out.print("Invalid answer, please select 0 or 1: ");
@@ -260,6 +269,7 @@ class OlympicGame {
             System.out.println("You reached the end of the game.");
             //System.out.println("Your results are:");
             //RunOlympic.printResults();
+
             System.out.println("Your total point value is: " + point + " when averaging all your points in the game");
             System.out.println();
             System.out.println();
@@ -279,6 +289,6 @@ class OlympicGame {
             
             //Close scanner
             gameRun.close();
-            
+
         }
 }
