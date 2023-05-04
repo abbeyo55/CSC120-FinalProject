@@ -18,7 +18,7 @@ __YES__ 1 pt: Some paths through the game have **restricted access** until the p
 
 __YES__ 2 pts: Selected classes(s) are **effective, efficient** at supporting the desired operations and program behavior.
 
-_____ 2 pts: Design justification includes a discussion of at least one (reasonable) **alternative design** that could have been used, and the reasons why you decided against this alternative.
+__YES__ 2 pts: Design justification includes a discussion of at least one (reasonable) **alternative design** that could have been used, and the reasons why you decided against this alternative.
 
 __YES__ 2 pts: The project makes effective use of **Java built-in classes** whenever they are appropriate.
 
@@ -44,6 +44,6 @@ __YES__ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
       __YES__ Methods avoid confusing side effects.
 
-_____ 1 pt: All required files included with submission (including completed checklist file).
+__YES__ 1 pt: All required files included with submission (including completed checklist file).
 
-_____ 1 pt: `readme.md` contains your reflection on the project and responses to all prompts .
+__YES__ 1 pt: `readme.md` contains your reflection on the project and responses to all prompts .
