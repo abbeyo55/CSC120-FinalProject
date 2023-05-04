@@ -8,7 +8,7 @@ If your game includes challenges that must be overcome to win, also list them be
 
 Below are the correct and wrong responses to all prompts asked of user. Correct responses are placed first, then after the comma is the incorrect anwser. To score perfectly use all the first letters. 
 
-The physical description of the layout of the game is attached within the CSC final proj game board pdf. This image shows just how a user will move along the game board as if they are rolling the dice and choosing a question based on the spot they land on. When landing on that spot, the user will be prompted a question. The user will continue to be asked of the prompt until an anwser of either 0 or 1 is given corresponding to the question answers. There are no "challenges" besides answering the questions correctly to gain the "master" status. However, it is possible for a user to gain the master status without getting all of the questions correct. To get them all correct means the user is a Olympics Master. 
+The physical description of the layout of the game is attached within the CSC final proj game board pdf. This image shows just how a user will move along the game board as if they are rolling the dice and choosing a question based on the spot they land on. When landing on that spot, the user will be prompted a question. The user will continue to be asked of the prompt until an anwser of either 0 or 1 is given corresponding to the question answers. There are no "challenges" besides trying to anwser all the questions correctly. 
 
 
 Q1: b, a

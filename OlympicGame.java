@@ -274,16 +274,24 @@ class OlympicGame {
             System.out.println();
             System.out.println();
             
-            if(point > 10){
+            if(point > 40){
+                OlympicsMaster Final = new OlympicsMaster();
+                 Final.display();
+            }
+            if(point < 40 & point > 20){
                 Master Final = new Master();
                  Final.display();
             }
-            if(point < 10 & point > -10){
+            if(point < 20 & point > 10){
                 Competent Final = new Competent();
                  Final.display();
             }
-            if(point < -10){
+            if(point < 10 & point > 0){
                 Novice Final = new Novice();
+                 Final.display();
+            }
+            if(point < 0){
+                StudyUp Final = new StudyUp();
                  Final.display();
             }
             
