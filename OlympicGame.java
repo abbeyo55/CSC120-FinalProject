@@ -44,7 +44,7 @@ class OlympicGame {
      * replace values ensures that the anwser list is printable and can be turned into a string (before anwswer seperator it was a list like [answer 1, answer 2] ) 
      */
     public void ask(Integer spot){ 
-        System.out.println(map[spot].getQuestion());
+        System.out.println("YOUR QUESTION: " + map[spot].getQuestion());
         String[] answerQuestion = map[spot].getAnswer();
         
         List <String> answerList = new ArrayList<String>();
@@ -193,9 +193,6 @@ class OlympicGame {
      * To start the game, this will run a loop until reaching "50" as that is when the game ends as it reaches the max amount of points on the game board
      * displays answer as to what level of knowledge you know of Olympics when the game ends
      */
-
-    
-     
     public static void main(String[] args) {
         OlympicGame RunOlympic = new OlympicGame();
         
@@ -254,7 +251,6 @@ class OlympicGame {
                 //Run the random number generator again to move on with the game (if continuing loop) or to reach final result at end of game (ends the loop)
                 //problem is when the game ends, this is still printed without question attached, and then the end game message is printed 
                 //Seperator
-                
                 System.out.println();
                 System.out.println("...");
                 System.out.println("Generating next spot on gameboard...");
@@ -294,7 +290,25 @@ class OlympicGame {
                 StudyUp Final = new StudyUp();
                  Final.display();
             }
+
+            System.out.println();
             
+            System.out.println();
+            System.out.println("The correct anwsers for the game are as follows:");
+            System.out.println("I encourage you to look above in seeing what you got incorrect!!");
+            System.out.println();
+            System.out.println("Q1: 1 / Q2: 0 / Q3: 1 / Q4: 0 / Q5: 1");
+            System.out.println("Q6: 0 / Q7: 1 / Q8: 0 / Q9: 0 / Q10: 1");
+            System.out.println("Q11: 0 / Q12: 1 / Q13: 1 / Q14: 1 / Q15: 1");
+            System.out.println("Q16: 1 / Q17: 0 / Q18: 0 / Q19: 0 / Q20: 1");
+            System.out.println("Q21: 1 / Q22: 1 / Q23: 0 / Q24: 0 / Q25: 1");
+            System.out.println("Q26: 0 / Q27: 0 / Q28: 0 / Q29: 0 / Q30: 1");
+            System.out.println("Q31: 1 / Q32: 0 / Q33: 1 / Q34: 0 / Q35: 0");
+            System.out.println("Q36: 0 / Q37: 1 / Q38: 0 / Q39: 1 / Q40: 1");
+            System.out.println("Q41: 0 / Q42: 1 / Q43: 0 / Q44: 0 / Q45: 1");
+            System.out.println("Q46: 0 / Q47: 0 / Q48: 1 / Q49: 0 / Q50: 1");
+            System.out.println();
+
             //Close scanner
             gameRun.close();
 
